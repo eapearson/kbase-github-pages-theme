@@ -72,7 +72,7 @@ Set up variables.
     {% endif %}
    
     <li class="navigation-list-item{% if is_current %} active{% endif %}{% if is_open %} open{% endif %}{% if has_children %} children{% endif %}">
-        <a href="{{ site.baseurl }}/{{ slug_prefix }}{{ slug }}" class="navigation-list-link{% if is_current %} active{% endif %}">
+        <a href="{{ slug_prefix }}{{ slug }}" class="navigation-list-link{% if is_current %} active{% endif %}">
             {{ item.label}}
         </a>
         {% if item.menu %}
