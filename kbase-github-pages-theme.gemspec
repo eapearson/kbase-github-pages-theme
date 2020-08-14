@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "kbase-github-pages-theme"
-  spec.version       = "0.3.1"
+  spec.version       = "0.4.0"
   spec.authors       = ["Patrick Marsceill", "Erik Pearson"]
   spec.email         = ["eapearson@lbl.gov"]
 
@@ -17,5 +17,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
   spec.add_runtime_dependency "rake", "~> 12.3.1"
 
-  spec.add_development_dependency "bundler", "~> 2.0.1"
+#   spec.add_development_dependency "bundler", "~> 2.0.1"
 end
