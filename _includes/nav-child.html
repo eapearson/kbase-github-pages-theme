@@ -10,6 +10,9 @@ Set up variables.
   {% assign page_is_index = false %}
 {% endif %}
 
+{% assign page_path2 = page.dir | remove_first: "/" | split: "/" %}
+{% assign dots = "../" * page_path2.length %}
+
 <ul class="navigation-list-child-list">
 
 {% for item in include.menu %}
@@ -72,7 +75,7 @@ Set up variables.
     {% endif %}
    
     <li class="navigation-list-item{% if is_current %} active{% endif %}{% if is_open %} open{% endif %}{% if has_children %} children{% endif %}">
-        <a href="{{ slug_prefix }}{{ slug }}{% if has_children %}/index.html{% else %}.html{% endif %}" class="navigation-list-link{% if is_current %} active{% endif %}">
+        <a href="{{ dots }}{{ slug_prefix }}{{ slug }}{% if has_children %}/index.html{% else %}.html{% endif %}" class="navigation-list-link{% if is_current %} active{% endif %}">
             {{ item.label}}
         </a>
         {% if item.menu %}
