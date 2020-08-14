@@ -1,7 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-
+    {% assign page_path = page.dir | remove_first: "/" | split: "/" %}
+    {% assign dots = "../" * page_path.length %}
     {% if site.plugins.jekyll-seo == nil %}
         <title>{{ page.title }}
             -
@@ -12,14 +13,14 @@
         {% endif %}
     {% endif %}
 
-    <link rel="shortcut icon" href="{{ "favicon.ico" }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ dots }}{{ "favicon.ico" }}" type="image/x-icon">
 
-    <link rel="stylesheet" href="{{ "assets/css/kbase-github-pages-theme.css" }}">
+    <link rel="stylesheet" href="{{ dots }}{{ "assets/css/kbase-github-pages-theme.css" }}">
 
     {% if site.search_enabled != nil %}
-        <script type="text/javascript" src="{{ "assets/js/vendor/lunr.min.js" }}"></script>
+        <script type="text/javascript" src="{{ dots }}{{ "assets/js/vendor/lunr.min.js" }}"></script>
     {% endif %}
-    <script type="text/javascript" src="{{ "assets/js/kbase-github-pages-theme.js"  }}"></script>
+    <script type="text/javascript" src="{{ dots }}{{ "assets/js/kbase-github-pages-theme.js"  }}"></script>
 
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
