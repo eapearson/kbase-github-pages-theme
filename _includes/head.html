@@ -1,8 +1,6 @@
 <head>
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    {% assign page_path = page.dir | remove_first: "/" | split: "/" %}
-    {% assign dots = "../" * page_path.length %}
     {% if site.plugins.jekyll-seo == nil %}
         <title>{{ page.title }}
             -

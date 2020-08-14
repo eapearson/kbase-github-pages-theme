@@ -10,11 +10,6 @@ Set up variables.
   {% assign page_is_index = false %}
 {% endif %}
 
-{% assign page_path2 = page.dir | remove_first: "/" | split: "/" %}
-{% assign dots = "../" * page_path2.length %}
-
-{% assign path_path3 = page.dir %}
-
 <ul class="navigation-list-child-list">
 
 {% for item in include.menu %}
