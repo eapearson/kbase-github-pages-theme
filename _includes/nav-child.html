@@ -12,6 +12,8 @@ Set up variables.
 
 <ul class="navigation-list-child-list">
 
+{% if include.level == 1 %}<li href="/index.html">Home</li>{% endif %}
+
 {% for item in include.menu %}
 
     {% if item.slug == nil %}
