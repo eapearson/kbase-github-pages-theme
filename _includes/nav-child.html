@@ -12,7 +12,7 @@ Set up variables.
 
 <ul class="navigation-list-child-list">
 
-{% if include.level == 1 %}<li class="navigation-list-item"> <a class="navigation-list-link" href="{{ site.baseurl }}/{% if jekyll.environment == "production" %}/index.html{% else %}/{% endif %}">Home</a></li>{% endif %}
+{% if include.level == 1 %}<li class="navigation-list-item"> <a class="navigation-list-link" href="{{ site.baseurl }}{% if jekyll.environment == "production" %}/index.html{% else %}/{% endif %}">Home</a></li>{% endif %}
 
 {% for item in include.menu %}
 
